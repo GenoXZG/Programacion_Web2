@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Uso de API</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Generacion de QR</h1>
+    </header>
+
+    <div>
+        <div class="container">
+            <form class="form" action="">
+                <legend> Ingresa los campos correspondientes </legend>
+                    <label class="label">Producto:</label>
+                        <input class="input" type="text" id="producto" required maxlength="100" placeholder="Producto" >
+                    <label class="label">Proveedor: </label>
+                        <input class="input" type="text"  placeholder="Ingresa el proveedor" id="proveedor" required>
+                    <label  class="label"> Estatus del producto: </label>
+                        <input class="input" type="text" placeholder="Selecciona una opcion" id="input_estatus"required  list="estatus" >
+                        <datalist id="estatus" >
+                            <option value="En stock">+</option>
+                            <option value="Sin stock">-</option>
+                        </datalist>
+
+                <button class="input" type="submit" onclick="generarQR()">
+                    Generar QR
+                </button>
+            </form>
+           
+        </div>
+        <div class="qr_container">
+            <div class="qr" id="qr-code">
+
+            </div>
+         </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
