@@ -2,7 +2,7 @@ const serverCreateHTTP = require('http');
 const host = "localhost"
 const port = 3310;
 
-// create server
+//server
 
 const server = serverCreateHTTP.createServer((req, res) => {
     res.setHeader('Content-Type', 'text/plain');
